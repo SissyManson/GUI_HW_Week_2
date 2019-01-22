@@ -134,11 +134,11 @@ namespace ConfigureMyAuto
                 if (carPrice > 0 && carDiscount > 0)
                 {
                     extraAdds += carPrice;
-                    LblTotalPrice.Text = "Total Price: " + (extraAdds * carDiscount) / 100 + "$"; //formula za %
+                    LblTotalPrice.Text = "Total Price: " + ((extraAdds + carPrice)* carDiscount) / 100 + "$"; //formula za %
                 }
                 else
                 {
-                    LblTotalPrice.Text = "Total Price: " + extraAdds + "$";
+                    LblTotalPrice.Text = "Total Price: " + (extraAdds + carPrice) + "$";
                 }
             }
         }
